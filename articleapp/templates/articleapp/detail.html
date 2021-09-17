@@ -43,11 +43,11 @@
             <div>
                 <a href="{% url 'articleapp:update' pk=target_article.pk %}"
                    class="btn btn-success rounded-pill px-5">
-                    Update
+                    수정
                 </a>
                 <a href="{% url 'articleapp:delete' pk=target_article.pk %}"
                    class="btn btn-danger rounded-pill px-5">
-                    Delete
+                    삭제
                 </a>
             </div>
             {% endif %}
@@ -81,7 +81,7 @@
                     <div style="text-align: right">
                         <a href="{% url 'commentapp:delete' pk=comment.pk %}"
                            class="btn btn-danger rounded-pill px-5">
-                            Delete
+                            삭제
                         </a>
                     </div>
                     {% endif %}
