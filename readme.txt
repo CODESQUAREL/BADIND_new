@@ -16,3 +16,5 @@ python manage.py runserver
 
 서버주소
 http://127.0.0.1:8000
+
+빠이팅!!
