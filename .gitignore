@@ -76,10 +76,6 @@ fabric.properties
 
 venv/
 
-db.sqlite3
-
 .idea
 
 __pycache__/
-
-media
