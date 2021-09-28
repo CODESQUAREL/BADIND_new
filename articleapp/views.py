@@ -61,3 +61,9 @@ class ArticleListView(ListView):
     context_object_name = 'article_list'
     template_name = 'articleapp/list.html'
     paginate_by = 20
+
+class ArticleHomeView(ListView):
+    model = Article
+    context_object_name = 'article_list'
+    template_name = 'articleapp/home.html'
+    paginate_by = 20

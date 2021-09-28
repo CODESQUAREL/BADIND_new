@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ValidationError
 from django.db import transaction
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, request
 from django.shortcuts import render
 
 # Create your views here.
@@ -22,6 +22,10 @@ def db_transaction(user, article):
     like_record = LikeRecord.objects.filter(user=user,
                                             article=article)
     if like_record.exists():
+        # messages.add_message(request)
+        # article.like -= 1
+        # like_record.delete()
+        # article.save()
         raise ValidationError('like already exists.')
     else:
         LikeRecord(user=user, article=article).save()
