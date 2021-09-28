@@ -3,9 +3,9 @@
 
 {% block body %}
 
-    <div>
+    <div style="text-align: center;">
         <h5>
-            hi
+            바디커스텀
         </h5>
     </div>
 
@@ -13,61 +13,66 @@
 
 
 {% block content %}
+    <div class = "homepage2" >
+        <div style="text-align: center;">
+            <h5>
+                커뮤니티
+            </h5>
+        </div>
+        <style>
+            .container {
+                padding: 0;
+                margin: 0 auto;
+            }
 
-    <style>
-        .container {
-            padding: 0;
-            margin: 0 auto;
-        }
+            .container div {
+              width: 45%;
+                max-width: 200px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 1rem;
+                flex-direction: column;
+                box-shadow: 0 0 .5rem darkgray;
+            }
 
-        .container div {
-          width: 45%;
-            max-width: 200px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 1rem;
-            flex-direction: column;
-            box-shadow: 0 0 .5rem darkgray;
-        }
-
-        .container img {
-            width: 100%;
-            border-radius: 1rem;
-        }
-    </style>
+            .container img {
+                width: 100%;
+                border-radius: 1rem;
+            }
+        </style>
 
 
-    <div class="container my-4">
+        <div class="container my-4">
 
-        {% for article in article_list %}
+            {% for article in article_list %}
 
-            <div>
-                <a href="{% url 'articleapp:detail' pk=article.pk %}">
-                    <img src="{{ article.image.url }}" alt="">
-                </a>
-                <span class="NNS_B m-2">{{ article.title }}</span>
-            </div>
+                <div>
+                    <a href="{% url 'articleapp:detail' pk=article.pk %}">
+                        <img src="{{ article.image.url }}" alt="">
+                    </a>
+                    <span class="NNS_B m-2">{{ article.title }}</span>
+                </div>
 
-        {% endfor %}
+            {% endfor %}
 
+        </div>
+
+        <script src="{% static 'js/magicgrid.js' %}"></script>
+
+        {% include 'snippets/pagination.html' %}
+
+        <div class="text-center my-5">
+            <a href="{% url 'articleapp:create' %}"
+                class="btn btn-outline-danger rounded-pill px-5">
+                스토리 작성
+            </a>
+            <a href="{% url 'articleapp:create' %}"
+                class="btn btn-danger rounded-pill material-icons">
+                brush
+            </a>
+        </div>
     </div>
-
-    <script src="{% static 'js/magicgrid.js' %}"></script>
-
-    {% include 'snippets/pagination.html' %}
-
-    <div class="text-center my-5">
-        <a href="{% url 'articleapp:create' %}"
-            class="btn btn-outline-danger rounded-pill px-5">
-            스토리 작성
-        </a>
-        <a href="{% url 'articleapp:create' %}"
-            class="btn btn-danger rounded-pill material-icons">
-            brush
-        </a>
-    </div>
-
 
 {% endblock %}
 
