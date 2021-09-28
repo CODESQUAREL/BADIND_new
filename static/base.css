@@ -99,5 +99,13 @@ a:hover {
     padding-left: -0.5rem;
     margin-top: 1rem;
     margin-bottom: -1rem;
+}
 
+.homepage {
+    background-color: #a2d7c7;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: -0.5rem;
+    /*margin-top: 1rem;*/
+    margin-bottom: -1rem;
 }
