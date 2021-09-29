@@ -51,7 +51,7 @@
                     <a href="{% url 'articleapp:detail' pk=article.pk %}">
                         <img src="{{ article.image.url }}" alt="">
                     </a>
-                    <span class="NNS_B m-2">{{ article.title }}</span>
+{#                    <span class="NNS_B m-2">{{ article.title }}</span>#}
                 </div>
 
             {% endfor %}
@@ -60,8 +60,13 @@
 
         <script src="{% static 'js/magicgrid.js' %}"></script>
 
-        {% include 'snippets/pagination.html' %}
-
+{#        {% include 'snippets/pagination.html' %}#}
+        <div class="text-center my-5">
+            <a href="{% url 'articleapp:list' %}"
+                class="btn btn-secondary rounded-pill">
+                더보기
+            </a>
+        </div>
         <div class="text-center my-5">
             <a href="{% url 'articleapp:create' %}"
                 class="btn btn-outline-danger rounded-pill px-5">
