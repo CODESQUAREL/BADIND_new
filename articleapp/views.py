@@ -66,4 +66,4 @@ class ArticleHomeView(ListView):
     model = Article
     context_object_name = 'article_list'
     template_name = 'articleapp/home.html'
-    paginate_by = 4
+    paginate_by = 10

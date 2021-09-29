@@ -102,10 +102,16 @@ a:hover {
 }
 
 .homepage {
-    background-color: #a2d7c7;
+    /*background-color: slategrey;*/
+    background: linear-gradient(#2E2E2E, whitesmoke);
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: -0.5rem;
     /*margin-top: 1rem;*/
     margin-bottom: -1rem;
+}
+
+.bodycustomimg {
+    max-width: 100%;
+    margin: -2rem;
 }
